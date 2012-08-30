@@ -5,6 +5,6 @@ class LocationController < ApplicationController
 
     # 近くにいるpecori可能なユーザを返す
     near_users = User.find_all_by_current_location_id(params[:current_location_id])
-    render :json => {:message => "ok", :near_users = near_users}
+    render :json => {:message => "ok", :near_users => near_users}
   end
 end
